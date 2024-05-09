@@ -11,9 +11,9 @@ chatInput.addEventListener("keydown", (event) => {
         event.preventDefault();
         const userInput = chatInput.value.trim();
         if (userInput) {
+            chatInput.value = "";
             addChatMessage("You", userInput);
             sendChatMessage(userInput);
-            chatInput.value = "";
         }
     }
 });
@@ -21,9 +21,9 @@ chatInput.addEventListener("keydown", (event) => {
 chatSendButton.addEventListener("click", () => {
     const userInput = chatInput.value.trim();
     if (userInput) {
+        chatInput.value = "";
         addChatMessage("You", userInput);
         sendChatMessage(userInput);
-        chatInput.value = "";
     }
 });
 
